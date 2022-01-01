@@ -1,0 +1,17 @@
+site_name: Easy Allowlist & Queue Documentation
+
+theme:
+  name: material
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+
+copyright: Copyright &copy; 2021 - 2022 jaksam1074#6183
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/7prxECaP6J
