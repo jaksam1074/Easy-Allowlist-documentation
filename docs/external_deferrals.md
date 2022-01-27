@@ -108,14 +108,11 @@ local function OnPlayerConnecting(name, setKickReason, deferrals)
         deferrals.done('Duplicate Rockstar License Found')
     else
         --[[
-            -- REMOVES THE OLD deferrals.done() and the queue since easy_allowlist also provides you a queue system
-            deferrals.done()
             Wait(1000)
             TriggerEvent('connectqueue:playerConnect', name, setKickReason, deferrals)
         ]]
-
-        -- easy_allowlist system
-        TriggerEvent("easy_allowlist:startDeferringPlayer", player, deferrals)
+        
+        deferrals.done()
     end
 end
 ```
