@@ -1,21 +1,3 @@
-## Disable default easy_allowlist deferrals
-
-In case your framework uses deferrals itself, you can disable the default deferrals used by easy_allowlist. 
-
-You have to add the following code in ```easy_allowlist/integrations/sv_integrations.lua```
-
-```lua
-Citizen.CreateThread(function() 
-    exports["easy_allowlist"]:disableScriptEvent("playerConnecting")
-end)
-```
-
-And you'll have to manually add the event in your framework script that use deferrals, by using the following event server side, replacing deferrals.done()
-
-```lua
-TriggerEvent("easy_allowlist:startDeferringPlayer", source, deferrals)
-```
-
 ## Example for QB-Core
 
 **Old code**
